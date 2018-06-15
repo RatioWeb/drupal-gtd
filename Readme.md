@@ -21,7 +21,8 @@ Now, you have working Drupal installation. Please visit http://headless_drupal.d
 
 Wrong permission on files folder.
 
-``` chmod 777 web/sites/default/files/
+``` shell
+chmod 777 web/sites/default/files/
 cd web
 drush cr
 ```
