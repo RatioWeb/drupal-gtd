@@ -16,3 +16,14 @@ composer drupal:scaffold
 ```
 
 Now, you have working Drupal installation. Please visit http://headless_drupal.docker.localhost:8000 and check. You can use `root` for login and `root` for password.
+
+### Posible problems
+
+Wrong permission on files folder.
+
+``` chmod 777 web/sites/default/files/
+cd web
+drush cr
+```
+
+
