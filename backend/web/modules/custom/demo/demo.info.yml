@@ -1,0 +1,5 @@
+name: 'demo'
+type: module
+description: 'demo'
+core: 8.x
+package: 'demo'

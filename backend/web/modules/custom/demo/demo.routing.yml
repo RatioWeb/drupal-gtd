@@ -1,0 +1,48 @@
+
+demo.api_node_collection:
+  path: 'node'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\demo\Controller\ApiController::getNodes'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
+
+demo.api_node_collection_add:
+  path: '/demo/api/node'
+  methods: [PUT]
+  defaults:
+    _controller: '\Drupal\demo\Controller\ApiController::addNode'
+  requirements:
+    _permission: 'access content'
+
+
+demo.api_single_node:
+  path: 'node/{node}'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\demo\Controller\ApiController::getNode'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
+    node: \d+
+
+
+demo.api_single_node_update:
+  path: 'node/{node}'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\demo\Controller\ApiController::updateNode'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
+    node: \d+
+
+demo.api_single_node_delete:
+  path: '/demo/api/node/{node}'
+  methods: [DELETE]
+  defaults:
+    _controller: '\Drupal\demo\Controller\ApiController::deleteNode'
+  requirements:
+    _permission: 'access content'
+    node: \d+
