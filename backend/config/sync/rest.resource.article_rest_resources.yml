@@ -1,0 +1,18 @@
+uuid: 0700e477-06e5-4ddc-a64b-40131f60627b
+langcode: en
+status: false
+dependencies:
+  module:
+    - restui
+    - serialization
+    - user
+id: article_rest_resources
+plugin_id: article_rest_resources
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
