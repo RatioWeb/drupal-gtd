@@ -1,0 +1,28 @@
+custom_endpoints.api_node_collection:
+  path: 'api/rest/articles'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\custom_endpoints\Controller\ApiController::getNodes'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
+
+
+custom_endpoints.single_node:
+  path: 'node/{node}'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\custom_endpoints\Controller\ApiController::getNode'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
+
+
+custom_endpoints.update_single_node:
+  path: 'node/{node}'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\custom_endpoints\Controller\ApiController::updateNode'
+  requirements:
+    _permission: 'access content'
+    _format: 'json'
